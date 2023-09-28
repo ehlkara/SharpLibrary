@@ -5,10 +5,10 @@ namespace SharpLibrary.BusinessLayer.IServices
 {
     public interface IBookService
     {
-        Task<Response<IEnumerable<Book>>> GetAllBooks();
-        Task<Response<Book>> GetBookById(int id);
-        Task<Response<bool>> AddBook(Book book);
-        Task<Response<bool>> UpdateBook(Book book);
+        Task<Response<IEnumerable<BookResponse>>> GetAllBooks();
+        Task<Response<BookResponse>> GetBookById(int id);
+        Task<Response<bool>> AddBook(BookRequest bookRequest);
+        Task<Response<bool>> UpdateBook(UpdateBookRequest bookRequest);
         Task<Response<bool>> DeleteBook(int id);
     }
 

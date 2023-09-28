@@ -8,14 +8,18 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SharpLibrary.DataAccess\SharpLibrary.DataAccess.csproj" />
-    <ProjectReference Include="..\SharpLibrary.Model\SharpLibrary.Models.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="IServices\" />
     <None Remove="Services\" />
+    <None Remove="Mapping\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IServices\" />
     <Folder Include="Services\" />
+    <Folder Include="Mapping\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
   </ItemGroup>
 </Project>

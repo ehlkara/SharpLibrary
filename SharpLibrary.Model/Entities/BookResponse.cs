@@ -1,9 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
+﻿using System;
 namespace SharpLibrary.Models.Entities
 {
-    [Table("Books")]
-    public class Book : BaseEntity
+	public class BookResponse
 	{
         public string Name { get; set; }
         public string Writer { get; set; }
