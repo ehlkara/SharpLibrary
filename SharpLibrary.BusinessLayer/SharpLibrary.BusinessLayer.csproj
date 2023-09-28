@@ -8,5 +8,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SharpLibrary.DataAccess\SharpLibrary.DataAccess.csproj" />
+    <ProjectReference Include="..\SharpLibrary.Model\SharpLibrary.Models.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="IServices\" />
+    <None Remove="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IServices\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

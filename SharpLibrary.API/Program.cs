@@ -1,4 +1,8 @@
 ﻿using Microsoft.Data.SqlClient;
+using SharpLibrary.BusinessLayer.IServices;
+using SharpLibrary.BusinessLayer.Services;
+using SharpLibrary.DataAccess.Interfaces;
+using SharpLibrary.DataAccess.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +11,8 @@ var configuration = builder.Configuration;
 var connectionString = configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddSingleton(new SqlConnection(connectionString));
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped<IBookService, BookService>();
 
 
 builder.Services.AddControllers();

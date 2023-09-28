@@ -7,14 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="ControllerBases\" />
-    <None Remove="Dtos\" />
+    <None Remove="Entities\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ControllerBases\" />
-    <Folder Include="Dtos\" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
+    <Folder Include="Entities\" />
   </ItemGroup>
 </Project>
